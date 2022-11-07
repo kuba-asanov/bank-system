@@ -5,31 +5,33 @@ import com.example.banksystem.model.TransactionHistory;
 import com.example.banksystem.model.TransactionModel;
 import com.example.banksystem.repo.MongoRepo;
 import com.example.banksystem.repo.TransactionRepo;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
-@CrossOrigin
-    @RestController
-    public class MainController {
+@RestController
+@RequestMapping("/")
+public class MainController {
+    public static int key=0;
 
-        public static int key=0;
+    @Autowired
+    private Customers customer;
 
-        @Autowired
-        private Customers customer;
+    @Autowired
+    private MongoRepo mongorepo;
 
-        @Autowired
-        private MongoRepo mongorepo;
-
-        @Autowired
-        private TransactionRepo tranRepo;
+    @Autowired
+    private TransactionRepo tranRepo;
 
         @GetMapping("/")
         public String index() {
             return "Hello Kuba!";
         }
 
+        @ApiOperation(value = "Getting all customers")
         @GetMapping("/getall")
         public ArrayList<Customers> getAllCustomers(){
             ArrayList <Customers> userlist = new ArrayList<>();
@@ -37,18 +39,20 @@ import java.util.ArrayList;
             return userlist;
         }
 
+        @ApiOperation(value = "Get customer by uuid")
         @GetMapping("/get/{id}")
         public Customers getCustomer(@PathVariable String id) {
             return mongorepo.findById(id).get();
         }
 
-
-        @PostMapping("/post")
+        @ApiOperation(value = "Create customer")
+        @PostMapping("/create")
         public String addCustomer(@RequestBody Customers customer) {
             mongorepo.save(customer);
             return "Added";
         }
 
+        @ApiOperation(value = "Update customer")
         @PostMapping("/update")
         public String updateCustomer(@RequestBody Customers customer) {
 
@@ -56,13 +60,20 @@ import java.util.ArrayList;
             mongorepo.save(newCustomer);
             return "Update";
         }
-
         @Autowired
         private TransactionModel transaction;
+
+        @ApiOperation(value = "Delete customer by uuid")
+        @DeleteMapping("/delete/{id}")
+        public String deleteCustomer(@PathVariable String id) {
+            mongorepo.deleteById(id);
+            return "Deleted";
+        }
 
         @Autowired
         private TransactionHistory newTrans;
 
+        @ApiOperation(value = "Top up balance")
         @PutMapping("/transaction")
         public String updateBalance(@RequestBody TransactionModel transaction ) {
             String id = transaction.getId();
@@ -83,19 +94,15 @@ import java.util.ArrayList;
             return "Sent";
         }
 
-        @GetMapping("/transaction")
+
+        @ApiOperation(value = "Getting all transactions")
+        @GetMapping("/transactions")
         public ArrayList<TransactionHistory> showTransactions(){
 
             ArrayList <TransactionHistory> history = new ArrayList<>();
             tranRepo.findAll().forEach(history::add);
             return history;
 
-        }
-
-        @DeleteMapping("/delete/{id}")
-        public String delete(@PathVariable String id) {
-            mongorepo.deleteById(id);
-            return "Deleted";
         }
     }
 
