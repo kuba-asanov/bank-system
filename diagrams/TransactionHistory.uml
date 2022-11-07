@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.example.banksystem.model.TransactionHistory</OriginalElement>
+  <nodes>
+    <node x="109.33093487335046" y="-9.708663302481973">org.springframework.stereotype.Component</node>
+    <node x="-105.46373543200218" y="-15.903258558874818">org.springframework.data.mongodb.core.mapping.Document</node>
+    <node x="1.6533160693095397" y="90.79778553656467">com.example.banksystem.model.TransactionHistory</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.example.banksystem.model.TransactionHistory" target="org.springframework.data.mongodb.core.mapping.Document" relationship="REALIZATION">
+      <point x="-99.5" y="-77.0" />
+      <point x="45.11705150131172" y="15.5" />
+    </edge>
+    <edge source="com.example.banksystem.model.TransactionHistory" target="org.springframework.stereotype.Component" relationship="REALIZATION">
+      <point x="76.17761880404092" y="-77.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.5" showDependencies="false" x="87.5" y="124.5" />
+  <SelectedNodes>
+    <node>com.example.banksystem.model.TransactionHistory</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

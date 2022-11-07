@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.example.banksystem.model.Customers</OriginalElement>
+  <nodes>
+    <node x="-67.41209294922257" y="123.4542422713107">com.example.banksystem.model.Customers</node>
+    <node x="350.897666625085" y="71.6703493898775">org.springframework.stereotype.Component</node>
+    <node x="125.07709502208999" y="31.88571291032133">org.springframework.web.bind.annotation.CrossOrigin</node>
+    <node x="-75.04439988922607" y="-15.628213272323105">org.springframework.data.mongodb.core.mapping.Document</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.example.banksystem.model.Customers" target="org.springframework.stereotype.Component" relationship="REALIZATION">
+      <point x="176.99999999999997" y="0.0" />
+      <point x="426.397666625085" y="285.4542422713107" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="com.example.banksystem.model.Customers" target="org.springframework.web.bind.annotation.CrossOrigin" relationship="REALIZATION">
+      <point x="90.48918797131256" y="-162.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="com.example.banksystem.model.Customers" target="org.springframework.data.mongodb.core.mapping.Document" relationship="REALIZATION">
+      <point x="-115.1323069400035" y="-162.0" />
+      <point x="0.0" y="15.499999999999996" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.9173553719008268" showDependencies="false" x="513.6891891891889" y="292.8783783783784" />
+  <SelectedNodes>
+    <node>com.example.banksystem.model.Customers</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.example.banksystem.model.TransactionModel</OriginalElement>
+  <nodes>
+    <node x="-102.0" y="76.5">com.example.banksystem.model.TransactionModel</node>
+    <node x="-74.5" y="-15.5">org.springframework.stereotype.Component</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.example.banksystem.model.TransactionModel" target="org.springframework.stereotype.Component" relationship="REALIZATION">
+      <point x="0.0" y="-41.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.5" showDependencies="false" x="11.0" y="81.50000000000001" />
+  <SelectedNodes>
+    <node>com.example.banksystem.model.TransactionModel</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
