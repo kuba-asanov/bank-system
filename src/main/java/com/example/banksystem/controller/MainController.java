@@ -5,7 +5,6 @@ import com.example.banksystem.model.TransactionHistory;
 import com.example.banksystem.model.TransactionModel;
 import com.example.banksystem.repo.MongoRepo;
 import com.example.banksystem.repo.TransactionRepo;
-import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,9 +19,11 @@ public class MainController {
     @Autowired
     private Customers customer;
 
+    //Autowired Singleton
     @Autowired
     private MongoRepo mongorepo;
 
+    //Autowired Singleton
     @Autowired
     private TransactionRepo tranRepo;
 

@@ -20,3 +20,8 @@ http://localhost:8080/swagger-ui/index.html
 ### UML diagrams
 ![diagram](diagrams/Customers.png?raw=true)
 ![diagram](diagrams/MainController.png?raw=true)
+
+### Used patterns:
+1) Factory Method Pattern
+2) Singleton Pattern(Autowired Singletons)
+3) Abstract Factory Pattern

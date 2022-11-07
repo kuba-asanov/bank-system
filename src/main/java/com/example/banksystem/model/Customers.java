@@ -20,6 +20,7 @@ public class Customers {
 
     }
 
+    //Factory Method Pattern
     public Customers(String id, String name, String email, String mobile, int balance) {
         super();
         this.id = id;
